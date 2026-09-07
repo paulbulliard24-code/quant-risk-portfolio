@@ -10,7 +10,7 @@ check model properties rather than implementation details.
 | # | Project | Question it answers |
 |---|---------|---------------------|
 | 1 | [Margin Call Liquidity Risk Simulator](01-margin-call-liquidity/) | How large a committed credit line does a hedged commodity trader need to survive margin calls at 99% confidence? |
-| 2 | [VaR and Expected Shortfall Backtesting](02-var-es-backtesting/) | *(coming soon)* Do our market risk models actually deliver the coverage they promise? |
+| 2 | [VaR and Expected Shortfall Backtesting](02-var-es-backtesting/) | Do our market risk models actually deliver the coverage they promise? |
 | 3 | [Option Pricing Model Validation](03-option-pricing-validation/) | *(coming soon)* How would a validation team independently check an option pricing model? |
 
 ## Setup
@@ -33,6 +33,13 @@ python run_analysis.py
 All simulations are seeded, so every number and figure in the READMEs is
 exactly reproducible.
 
+Note: run `pytest` from inside a project folder (or use
+`./run_all_tests.sh` from the root). The projects are self-contained,
+each with its own `src` package, so their suites run as separate pytest
+sessions.
+
 ## Dependencies
 
-`numpy`, `pandas`, `matplotlib`, `scipy`, `pytest` — nothing else.
+`numpy`, `pandas`, `matplotlib`, `scipy`, `pytest` — plus `yfinance`,
+used once in project 2 to download price data (the download is cached
+and committed, so the repo runs fully offline).

@@ -3,3 +3,4 @@ pandas>=2.0
 matplotlib>=3.8
 scipy>=1.11
 pytest>=8.0
+yfinance>=0.2  # only used to refresh the committed price cache in project 2
