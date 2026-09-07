@@ -1,6 +1,6 @@
-numpy>=1.26
-pandas>=2.0
-matplotlib>=3.8
-scipy>=1.11
-pytest>=8.0
-yfinance>=0.2  # only used to refresh the committed price cache in project 2
+numpy==2.5.3
+pandas==3.0.5
+matplotlib==3.11.1
+scipy==1.18.1
+pytest==9.1.1
+yfinance==1.7.0  # only used to refresh the committed price cache in project 2
